@@ -1,0 +1,11 @@
+---
+language: cpp
+dist: xenial
+
+addons:
+  apt:
+    packages:
+      - libcgal-qt5-dev
+      - libboost-dev
+
+script: cmake . && make
