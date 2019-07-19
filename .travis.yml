@@ -8,4 +8,10 @@ addons:
       - libcgal-qt5-dev
       - libboost-dev
 
-script: cmake . && make
+script:
+  - cd ./XFREE
+  - cmake .
+  - make
+  - cd ../CTR
+  - cmake .
+  - make

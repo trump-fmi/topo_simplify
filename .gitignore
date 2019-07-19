@@ -37,4 +37,5 @@ CMakeCache.txt
 *.cmake
 *.tcl
 Makefile
-topo_simplify
+CTR/topo_simplify
+XFREE/xfree
