@@ -5,7 +5,7 @@ dist: bionic
 addons:
   apt:
     packages:
-      - libcgal-qt5-dev
+      - libcgal-dev
       - libboost-dev
 
 script:
