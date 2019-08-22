@@ -1,15 +1,31 @@
 ---
 language: cpp
 dist: bionic
+env:
+  CGAL_VERSION: 4.13.1
 
 addons:
   apt:
     packages:
       - libcgal-dev
       - libboost-dev
+      - libgmp-dev
+      - libmpfr-dev
+      - libboost-system-dev
+      - libboost-thread-dev
+      - libboost-dev
+      - g++
+      - cmake
+      - make
 
 script:
-  - cd ./XFREE
+  - "wget https://github.com/CGAL/cgal/releases/download/releases%2FCGAL-$CGAL_VERSION/CGAL-$CGAL_VERSION.tar.xz"
+  - tar xf CGAL-$CGAL_VERSION.tar.xz
+  - "cd ./CGAL-$CGAL_VERSION"
+  - cmake .
+  - make
+  - make install
+  - cd ../XFREE
   - cmake .
   - make
   - cd ../CTR

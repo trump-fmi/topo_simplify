@@ -39,3 +39,5 @@ CMakeCache.txt
 Makefile
 CTR/topo_simplify
 XFREE/xfree
+.idea
+/.idea
