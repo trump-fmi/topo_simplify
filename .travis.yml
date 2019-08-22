@@ -9,14 +9,8 @@ addons:
     packages:
       - libcgal-dev
       - libboost-dev
-      - libgmp-dev
-      - libmpfr-dev
       - libboost-system-dev
       - libboost-thread-dev
-      - libboost-dev
-      - g++
-      - cmake
-      - make
 
 script:
   - cd ./XFREE
