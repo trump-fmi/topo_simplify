@@ -133,11 +133,13 @@ int main(int argc, char** argv) {
     CGAL::insert_point(arr, p);
   mark_non_deg2(arr);
 
+  std::vector<Segment_2> segments;
   for (auto &c : curves) {
     for (int i = 1; i < c.size(); ++i) {
-      CGAL::insert(arr, Segment_2(c[i - 1], c[i]));
+      segments.push_back(Segment_2(c[i - 1], c[i]));
     }
   }
+  CGAL::insert(arr, segments.begin(), segments.end());
   mark_non_deg2(arr);
 
   auto parts = mark_subcurves(arr);
