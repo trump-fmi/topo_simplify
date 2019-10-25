@@ -81,6 +81,10 @@ int main(int argc, char **argv) {
     PS::simplify(cdt, Cost(), Stop(eps * eps), false);
     // output
     for (auto cid : handles) {
+      if (cid == 0) {
+        std::cout << std::endl;
+        continue;
+      }
       auto vertices_begin = cdt.vertices_in_constraint_begin(cid);
       auto vertices_end = cdt.vertices_in_constraint_end(cid);
       auto output = std::ostream_iterator<Point>(std::cout, " ");

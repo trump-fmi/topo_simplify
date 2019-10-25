@@ -144,6 +144,7 @@ int main(int argc, char** argv) {
 
   auto parts = mark_subcurves(arr);
   
+  std::cout.precision(std::numeric_limits<double>::max_digits10);
   std::copy(points.begin(), points.end(), std::ostream_iterator<Point_2>(std::cout, " "));
   std::cout << std::endl;
 
